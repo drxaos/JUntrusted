@@ -1,15 +1,16 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.googlecode.jvmvm</groupId>
-    <artifactId>jvmvm</artifactId>
+    <groupId>com.github.drxaos</groupId>
+    <artifactId>JUntrusted</artifactId>
     <version>1.0</version>
 
     <dependencies>
         <dependency>
-            <groupId>asm</groupId>
-            <artifactId>asm-all</artifactId>
-            <version>3.0</version>
+            <groupId>com.github.drxaos</groupId>
+            <artifactId>JvmVM</artifactId>
+            <version>0.1.2</version>
         </dependency>
+
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
@@ -25,19 +26,6 @@
             <artifactId>commons-codec</artifactId>
             <version>1.4</version>
         </dependency>
-        <dependency>
-            <groupId>com.sun</groupId>
-            <artifactId>tools</artifactId>
-            <version>1.4.2</version>
-            <scope>system</scope>
-            <systemPath>${java.home}/../lib/tools.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.jdt.core.compiler</groupId>
-            <artifactId>ecj</artifactId>
-            <version>4.4</version>
-        </dependency>
-
 
         <dependency>
             <groupId>junit</groupId>
@@ -146,12 +134,12 @@
                     <archive>
                         <manifest>
                             <addClasspath>false</addClasspath>
-                            <mainClass>com.googlecode.jvmvm.ui.Main</mainClass>
+                            <mainClass>com.github.drxaos.juntrusted.Main</mainClass>
                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                             <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
                         </manifest>
                         <manifestEntries>
-                            <Premain-Class>com.googlecode.jvmvm.ui.Main</Premain-Class>
+                            <Premain-Class>com.github.drxaos.juntrusted.Main</Premain-Class>
                         </manifestEntries>
                     </archive>
                 </configuration>
@@ -415,4 +403,10 @@
         </plugins>
     </build>
 
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
 </project>
