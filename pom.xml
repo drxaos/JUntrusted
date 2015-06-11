@@ -7,8 +7,8 @@
     <dependencies>
         <dependency>
             <groupId>com.github.drxaos</groupId>
-            <artifactId>JvmVM</artifactId>
-            <version>0.1.2</version>
+            <artifactId>jvmvm</artifactId>
+            <version>0.1.3</version>
         </dependency>
 
         <dependency>
@@ -163,7 +163,7 @@
                         </goals>
                         <configuration>
                             <includes>
-                                <include>asm:asm-all</include>
+                                <include>com.github.drxaos:jvmvm</include>
                                 <include>commons-io:commons-io</include>
                                 <include>org.apache.commons:commons-lang3</include>
                                 <include>commons-codec:commons-codec</include>
@@ -176,13 +176,8 @@
                                 <include>com.googlecode.soundlibs:vorbisspi</include>
                                 <include>com.googlecode.soundlibs:jorbis</include>
                                 <include>com.googlecode.soundlibs:jlayer</include>
-                                <include>com.sun:tools</include>
                             </includes>
                             <rules>
-                                <rule>
-                                    <pattern>com.sun.tools.javac.**</pattern>
-                                    <result>internal.javac.@1</result>
-                                </rule>
                             </rules>
                         </configuration>
                     </execution>
